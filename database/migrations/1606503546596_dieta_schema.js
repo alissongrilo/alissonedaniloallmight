@@ -1,16 +1,14 @@
 'use strict'
 
-/** @type {import('@adonisjs/lucid/src/Schema')} */
 const Schema = use('Schema')
 
 class DietaSchema extends Schema {
   up () {
-    this.create('dietas', (table) => {
+    this.create('Dieta', (table) => {
       table.increments()
       table.string('Finalidade', 45).notNullable().unique()
       table.time('Horario', 4).notNullable().unique()
       table.string('Alimento',45).notNullable().unique()
-      table
       .integer("id_user")
       .unsigned()
       .references("id")
