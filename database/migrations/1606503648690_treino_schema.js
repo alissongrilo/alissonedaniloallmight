@@ -22,7 +22,7 @@ class TreinoSchema extends Schema {
   }
 
   down () {
-    this.drop('treinos')
+    this.drop('Treino')
   }
 }
 

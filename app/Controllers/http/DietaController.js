@@ -2,7 +2,7 @@
 
 const Dieta = use("App/Models/Dieta");
 
-class CursoController {
+class DietaController {
   async index({ request, response, view }) {
     const Dieta = await Dieta.all();
     return Dieta;
