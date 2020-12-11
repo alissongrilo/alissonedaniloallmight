@@ -9,7 +9,7 @@ class DietaSchema extends Schema {
       table.time('Horario', 4).notNullable()
       table.string('Alimento',45).notNullable()
       table
-        .integer("id_user")
+        .integer("user_id")
         .unsigned()
         .references("id")
         .inTable("users")
@@ -21,7 +21,7 @@ class DietaSchema extends Schema {
   }
 
   down () {
-    this.drop('dietas')
+    this.drop('Dieta')
   }
 }
 

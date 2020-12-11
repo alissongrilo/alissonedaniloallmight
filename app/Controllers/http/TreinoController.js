@@ -30,13 +30,14 @@ class TreinoController {
     Treino.Finalidade = Finalidade;
     Treino.id = id;
     Treino.Exercicio = Exercicio;
-    await Treino.save();
+    Treino.Repeticoes = Repeticoes;
+    //await Treino.save();
     return Treino;
   }
 
   async destroy({ params, request, response }) {
     //const Treino = await Treino.findOrFail(params.id);
-    await Treino.delete();
+    //await Treino.delete();
     return Treino;
   }
 }

@@ -13,8 +13,8 @@ Route.post("/authenticate", "AuthController.authenticate");
   
   //Route.resource("Treino", "TreinoController").apiOnly();
 Route.post("/store", "TreinoController.store");
-Route.get("/show", "TreinoController.show");
+Route.get("/show:id", "TreinoController.show");
 Route.get("/index", "TreinoController.index");
-Route.put("/update", "TreinoController.update");
-Route.delete("/destroy", "TreinoController.destroy");
+Route.put("/update:id", "TreinoController.update");
+Route.delete("/destroy:id", "TreinoController.destroy");
 //}).middleware(["auth"]);

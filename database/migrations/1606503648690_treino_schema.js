@@ -8,9 +8,9 @@ class TreinoSchema extends Schema {
       table.increments()
       table.string('Finalidade', 45).notNullable()
       table.string('Exercicio', 45).notNullable()
-      table.string('Repeticoes', 2).notNullable()
+      table.string('Repeticoes', 45).notNullable()
       table
-        .integer("id_user")
+        .integer("user_id")
         .unsigned()
         .references("id")
         .inTable("users")
