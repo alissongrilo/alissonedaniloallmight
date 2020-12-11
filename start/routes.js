@@ -9,12 +9,12 @@ Route.get('/', () => {
 Route.post("/register", "AuthController.register");
 Route.post("/authenticate", "AuthController.authenticate");
 
-//Route.group(() => {
-  
-  //Route.resource("Treino", "TreinoController").apiOnly();
-Route.post("/store", "TreinoController.store");
-Route.get("/show:id", "TreinoController.show");
-Route.get("/index", "TreinoController.index");
-Route.put("/update:id", "TreinoController.update");
-Route.delete("/destroy:id", "TreinoController.destroy");
-//}).middleware(["auth"]);
+Route.group(() => {
+  Route.resource("treino", "TreinoController").apiOnly();
+}).middleware(["auth"]);
+
+/*  Route.post("/store", "TreinoController.store");
+  Route.get("/show:id", "TreinoController.show");
+  Route.get("/index", "TreinoController.index");
+  Route.put("/update:id", "TreinoController.update");
+  Route.delete("/destroy:id", "TreinoController.destroy");*/

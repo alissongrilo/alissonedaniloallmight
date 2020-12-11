@@ -4,11 +4,11 @@ const Schema = use('Schema')
 
 class TreinoSchema extends Schema {
   up () {
-    this.create('Treino', (table) => {
+    this.create('treinos', (table) => {
       table.increments()
-      table.string('Finalidade', 45).notNullable()
-      table.string('Exercicio', 45).notNullable()
-      table.string('Repeticoes', 45).notNullable()
+      table.string('finalidade', 45).notNullable()
+      table.string('exercicio', 45).notNullable()
+      table.string('repeticoes', 45).notNullable()
       table
         .integer("user_id")
         .unsigned()
@@ -22,7 +22,7 @@ class TreinoSchema extends Schema {
   }
 
   down () {
-    this.drop('Treino')
+    this.drop('treinos')
   }
 }
 

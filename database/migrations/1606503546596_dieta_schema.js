@@ -4,10 +4,10 @@ const Schema = use('Schema')
 
 class DietaSchema extends Schema {
   up () {
-    this.create('Dieta', (table) => {
+    this.create('dietas', (table) => {
       table.increments()
-      table.time('Horario', 4).notNullable()
-      table.string('Alimento',45).notNullable()
+      table.time('horario', 4).notNullable()
+      table.string('alimento',45).notNullable()
       table
         .integer("user_id")
         .unsigned()
@@ -21,7 +21,7 @@ class DietaSchema extends Schema {
   }
 
   down () {
-    this.drop('Dieta')
+    this.drop('dietas')
   }
 }
 
